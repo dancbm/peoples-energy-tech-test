@@ -1,7 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400&display=swap');
 :root {
     --primary-colour: #5600AC;
+    --primary-colour-hover: #801de4;
+    --primary-colour-active: #3d007a;
+    --primary-colour-focus: #d800a9;
 }
+
+
+/* SEMANTIC ELEMENTS */
 
 body {
     margin: 0;
@@ -10,10 +16,6 @@ body {
     -moz-osx-font-smoothing: grayscale;
     background-color: #ffffff;
     background-image: url("./assets/bubbles.svg");
-}
-
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
 h1 {
@@ -28,7 +30,6 @@ button {
     font-size: 1.75em;
     padding: 10px 20px;
     border-radius: 10px;
-    align-self: center;
     outline: none;
     border: 0px;
     background-color: var(--primary-colour);
@@ -37,51 +38,25 @@ button {
 }
 
 button:hover {
-    background-color: #801de4;
+    background-color: var(--primary-colour-hover);
 }
 
 button:focus {
     background-color: var(--primary-colour);
-    outline: 3px solid rgb(233, 0, 221);
+    outline: 3px solid var(--primary-colour-focus);
 }
 
 button:active {
-    background-color: #3d007a;
+    background-color: var(--primary-colour-active);
 }
 
 ul {
     list-style: none;
+    padding: 0;
 }
 
-.PlanetCardContainer {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
 
-.PlanetCard {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 400px;
-    border: 1px solid grey;
-    border-radius: 20px;
-    margin: 2em;
-    background-color: #ffffff;
-}
-
-.PlanetImageContainer {
-    width: 400px;
-    height: 400px;
-    display: flex;
-    background-color: #000000;
-}
-
-.PlanetImage {
-    width: 100%;
-    height: auto;
-    margin: auto;
-}
+/* LANDING PAGE */
 
 .LandingPage {
     margin: 0 auto;
@@ -99,5 +74,51 @@ ul {
     flex-direction: column;
     justify-content: center;
     padding: 2em;
-    /* align-items: center; */
+    align-items: center;
+}
+
+
+/* PLANET GALLERY PAGE */
+
+.PlanetGallery {
+    display: flex;
+    margin: 0 auto;
+    max-width: 1440px;
+}
+
+.PlanetGalleryContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.PlanetGalleryItems {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.PlanetCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    border: 3px solid var(--primary-colour-focus);
+    border-radius: 20px;
+    margin: 2em;
+    background-color: var(--primary-colour);
+    color: white;
+}
+
+.PlanetImageContainer {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    background-color: #000000;
+}
+
+.PlanetImage {
+    width: 100%;
+    height: auto;
+    margin: auto;
 }
