@@ -14,6 +14,10 @@ const clientPort = process.env.PRODUCTION ? process.env.CLIENT_PORT : 3000;
 
 app.use(cors({ origin: `http://${clientHost}:${clientPort}` }));
 
+app.get("/api", (req, res) => {
+    res.json({ message: "The server says hello!" });
+});
+
 app.listen(port, () => {
     console.log(`Server started at ${host}:${port}`);
 });
