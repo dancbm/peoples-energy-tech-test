@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import PlanetCard from "../components/planetCard";
-import "../index.css";
+import "../styles.css";
+import PlanetGraphic from "../assets/planet.svg";
 
 const App = () => {
     // TODO: Pull loading state into context/redux
@@ -43,13 +44,30 @@ const App = () => {
                     Please try again later.
                 </p>
             ) : (
-                <ul className="PlanetCardContainer">
-                    {celestialData.map((object) => (
-                        <li key={object.name}>
-                            <PlanetCard planet={object} />
-                        </li>
-                    ))}
-                </ul>
+                // <ul className="PlanetCardContainer">
+                //     {celestialData.map((object) => (
+                //         <li key={object.name}>
+                //             <PlanetCard planet={object} />
+                //         </li>
+                //     ))}
+                // </ul>
+                <div className="LandingPage">
+                    <div className="LandingPageCol">
+                        <h1>The Solar System</h1>
+                        <h2>
+                            This app will give you the chance to explore the
+                            most well-known celestial objects in our solar
+                            system. Click below to explore!
+                        </h2>
+                        <button type="submit">See The Planets</button>
+                    </div>
+                    <div className="LandingPageCol">
+                        <img
+                            src={PlanetGraphic}
+                            alt="Simple graphic of a planet with ring"
+                        />
+                    </div>
+                </div>
             )}
         </div>
     );
