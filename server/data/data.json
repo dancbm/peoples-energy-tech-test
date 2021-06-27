@@ -1,0 +1,49 @@
+[{
+        "name": "Mercury",
+        "picture": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Mercury_in_color_-_Prockter07-edit1.jpg",
+        "age": 80,
+        "solarMass": 1
+    },
+    {
+        "name": "Venus",
+        "picture": "https://upload.wikimedia.org/wikipedia/commons/a/a9/PIA23791-Venus-NewlyProcessedView-20200608.jpg",
+        "age": 70,
+        "solarMass": 3
+    },
+    {
+        "name": "Earth",
+        "picture": "https://upload.wikimedia.org/wikipedia/commons/9/97/The_Earth_seen_from_Apollo_17.jpg",
+        "age": 60,
+        "solarMass": 4
+    },
+    {
+        "name": "Mars",
+        "picture": "https://upload.wikimedia.org/wikipedia/commons/0/02/OSIRIS_Mars_true_color.jpg",
+        "age": 50,
+        "solarMass": 2
+    },
+    {
+        "name": "Jupiter",
+        "picture": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Jupiter_and_its_shrunken_Great_Red_Spot.jpg",
+        "age": 40,
+        "solarMass": 8
+    },
+    {
+        "name": "Saturn",
+        "picture": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Jewel_of_the_Solar_System.jpg",
+        "age": 30,
+        "solarMass": 7
+    },
+    {
+        "name": "Uranus",
+        "picture": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Uranus2.jpg",
+        "age": 20,
+        "solarMass": 6
+    },
+    {
+        "name": "Neptune",
+        "picture": "https://upload.wikimedia.org/wikipedia/commons/6/63/Neptune_-_Voyager_2_%2829347980845%29_flatten_crop.jpg",
+        "age": 10,
+        "solarMass": 5
+    }
+]
