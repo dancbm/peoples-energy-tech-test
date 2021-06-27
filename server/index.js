@@ -12,11 +12,20 @@ const clientHost = process.env.PRODUCTION
     : "localhost";
 const clientPort = process.env.PRODUCTION ? process.env.CLIENT_PORT : 3000;
 
+const planetRoutes = require("./routes/planets");
+const apiRoutes = require("./routes/api");
+const errorRoutes = require("./routes/error");
+
 app.use(cors({ origin: `http://${clientHost}:${clientPort}` }));
 
-app.get("/api", (req, res) => {
-    res.json({ message: "The server says hello!" });
+app.use("/planets", planetRoutes);
+app.use("/api", apiRoutes);
+
+app.get("/", (req, res) => {
+    res.redirect("/planets");
 });
+
+app.use("/*", errorRoutes);
 
 app.listen(port, () => {
     console.log(`Server started at ${host}:${port}`);
