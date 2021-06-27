@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import PlanetCard from "../components/planetCard";
-import "../index.css";
+import Loading from "../components/loading";
 
-const App = () => {
+const PlanetGalleryPage = () => {
     // TODO: Pull loading state into context/redux
     const [loading, setLoading] = useState(true);
     // TODO: Pull error state into context/redux
@@ -33,26 +33,28 @@ const App = () => {
     }, [setCelestialData, serverHost, serverPort]);
 
     return (
-        <div>
-            {loading ? (
-                <p>Forming the solar system...</p>
-            ) : error ? (
-                <p>
-                    Oops! There was an error.
-                    <br />
-                    Please try again later.
-                </p>
-            ) : (
-                <ul className="PlanetCardContainer">
-                    {celestialData.map((object) => (
-                        <li key={object.name}>
-                            <PlanetCard planet={object} />
-                        </li>
-                    ))}
-                </ul>
-            )}
+        <div className="PlanetGallery">
+            <div className="PlanetGalleryContainer">
+                <h1>Planet Gallery</h1>
+                {loading ? (
+                    <Loading />
+                ) : error ? (
+                    <p>
+                        There was an error retrieving data, please try again
+                        soon
+                    </p>
+                ) : (
+                    <ul className="PlanetGalleryItems">
+                        {celestialData.map((planet) => (
+                            <li key={planet.name}>
+                                <PlanetCard planet={planet} />
+                            </li>
+                        ))}
+                    </ul>
+                )}
+            </div>
         </div>
     );
 };
 
-export default App;
+export default PlanetGalleryPage;

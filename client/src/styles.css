@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400&display=swap');
+:root {
+    --primary-colour: #5600AC;
+    --primary-colour-hover: #801de4;
+    --primary-colour-active: #3d007a;
+    --primary-colour-focus: #d800a9;
+}
+
+
+/* SEMANTIC ELEMENTS */
+
+body {
+    margin: 0;
+    font-family: 'Lexend', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #ffffff;
+    background-image: url("./assets/bubbles.svg");
+}
+
+h1 {
+    font-size: 3.5em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+button {
+    font-size: 1.75em;
+    padding: 10px 20px;
+    border-radius: 10px;
+    outline: none;
+    border: 0px;
+    background-color: var(--primary-colour);
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--primary-colour-hover);
+}
+
+button:focus {
+    background-color: var(--primary-colour);
+    outline: 3px solid var(--primary-colour-focus);
+}
+
+button:active {
+    background-color: var(--primary-colour-active);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+
+/* LANDING PAGE */
+
+.LandingPage {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1440px;
+    height: 100vh;
+    padding: 0 4em;
+}
+
+.LandingPageCol {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2em;
+    align-items: center;
+}
+
+
+/* PLANET GALLERY PAGE */
+
+.PlanetGallery {
+    display: flex;
+    margin: 0 auto;
+    max-width: 1440px;
+}
+
+.PlanetGalleryContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.PlanetGalleryItems {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.PlanetCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    border: 3px solid var(--primary-colour-focus);
+    border-radius: 20px;
+    margin: 2em;
+    background-color: var(--primary-colour);
+    color: white;
+}
+
+.PlanetImageContainer {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    background-color: #000000;
+}
+
+.PlanetImage {
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
